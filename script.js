@@ -53,21 +53,21 @@ const sectors=[sectorA,sectorB,sectorC,
 const tramLines = [blueLineTram,redLineTram,greenLineTram,yellowLineTram];
 
 ///DOM GENERAL///
-let blueTram = document.getElementById("blueTram");
-let redTram = document.getElementById("redTram");
-let greenTram = document.getElementById("greenTram");
-let yellowTram = document.getElementById("yellowTram");
-let tituloLinea = document.getElementById("tituloLinea");
-let detalleLinea = document.getElementById("detalleLinea");
-let tramTicket = document.getElementById("requestTicket");
-let tramSelect = document.getElementById("tramSelect")
-let tramOrigin = document.getElementById("tramOrigin");
-let tramDestination = document.getElementById("tramDestination");
-let myTickets = document.getElementById("myTickets");
-let showTickets = document.getElementById("showTickets");
-let showPassenger = document.getElementById("myPassenger");
-let ticketsEmpty = document.getElementById("ticketsEmpty");
-let thead = document.getElementById('thead');
+let blueTram            = document.getElementById("blueTram");
+let redTram             = document.getElementById("redTram");
+let greenTram           = document.getElementById("greenTram");
+let yellowTram          = document.getElementById("yellowTram");
+let tituloLinea         = document.getElementById("tituloLinea");
+let detalleLinea        = document.getElementById("detalleLinea");
+let tramTicket          = document.getElementById("requestTicket");
+let tramSelect          = document.getElementById("tramSelect")
+let tramOrigin          = document.getElementById("tramOrigin");
+let tramDestination     = document.getElementById("tramDestination");
+let myTickets           = document.getElementById("myTickets");
+let showTickets         = document.getElementById("showTickets");
+let showPassenger       = document.getElementById("myPassenger");
+let ticketsEmpty        = document.getElementById("ticketsEmpty");
+let thead               = document.getElementById('thead');
 
 ///EVENTS LISTENERS///
 
@@ -138,7 +138,7 @@ function seeTickets(){
                                     </tr>        
                                     `
                                     })  
-                                    : showTickets.innerHTML=`<td>No hay tickets</td>`;  
+                                    : showTickets.innerHTML=`<td>No recent tickets</td>`;  
 }
 
 ///elimina elementos del local storage///
@@ -169,7 +169,7 @@ function seePassengers(){
                                     </tr>        
                                     `
                                     })  
-                                    : showTickets.innerHTML=`<td>No hay pasajeros</td>`;    
+                                    : showTickets.innerHTML=`<td>No recent Passengers</td>`;    
 }
 
 ///FUNCIONES PARA COMPLETAR DATOS Y/O MODIFICAR EL DOM
