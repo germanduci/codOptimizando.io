@@ -49,7 +49,7 @@ const redLineTram       = [level3,sectorG,area3,freight];
 const greenLineTram     = [level1,sectorE,area7,sectorA];
 const yellowLineTram    = [sectorD,high,sectorF];
 
-const sectors=[sectorA,sectorB,sectorModel,
+const sectors=[sectorA,sectorB,sectorC,
     sectorD,sectorE,sectorF,sectorG,level1,
     level3,area3,area7,area9,freight,high]
 
