@@ -20,24 +20,27 @@ class locations{
         this.location=location;
     }
 }
+
+const sectorModel = new locations("Model");
+
 ///BLUE
-const sectorC   = new locations("Sector C Test Labs");
-const sectorB   = new locations("Sector B Coolant Reserve");
-const area9     = new locations("Area 9 Central Transit Hub");
+const sectorC   = {...sectorModel, location:"Sector C Test Labs"};
+const sectorB   = {...sectorModel, location:"Sector B Coolant Reserve"}
+const area9     = {...sectorModel, location:"Area 9 Central Transit Hub"}
 ///RED
-const level3    = new locations("Level 3 Dormitories");
-const sectorG   = new locations("Sector G Hydro Electric");
-const area3     = new locations("Area 3 Medium Security Facilities");
-const freight   = new locations("Freight Yard");
+const level3    = {...sectorModel, location:"Level 3 Dormitories"}
+const sectorG   = {...sectorModel, location:"Sector G Hydro Electric"};
+const area3     = {...sectorModel, location:"Area 3 Medium Security Facilities"};
+const freight   = {...sectorModel, location:"Freight Yard"};
 ///GREEN
-const level1    = new locations("Main Facility Entrance");
-const sectorE   = new locations("Sector E Biodome Complex");
-const area7     = new locations("Area 7 Recreational Facilities");
-const sectorA   = new locations("Sector A Training Facilities");
+const level1    = {...sectorModel, location:"Main Facility Entrance"};
+const sectorE   = {...sectorModel, location:"Sector E Biodome Complex"};
+const area7     = {...sectorModel, location:"Area 7 Recreational Facilities"};
+const sectorA   = {...sectorModel, location:"Sector A Training Facilities"};
 ///YELLOW
-const sectorD   = new locations("Sector D Administration");
-const high      = new locations("High Altitude Launch Center");
-const sectorF   = new locations("Sector F Lambda Complex");
+const sectorD   = {...sectorModel, location:"Sector D Administration"};
+const high      = {...sectorModel, location:"High Altitude Launch Center"};
+const sectorF   = {...sectorModel, location:"Sector F Lambda Complex"};
 
 
 ///CONTENEDORES DE OBJETOS///
@@ -46,7 +49,7 @@ const redLineTram       = [level3,sectorG,area3,freight];
 const greenLineTram     = [level1,sectorE,area7,sectorA];
 const yellowLineTram    = [sectorD,high,sectorF];
 
-const sectors=[sectorA,sectorB,sectorC,
+const sectors=[sectorA,sectorB,sectorModel,
     sectorD,sectorE,sectorF,sectorG,level1,
     level3,area3,area7,area9,freight,high]
 
@@ -107,7 +110,7 @@ tramTicket.addEventListener('submit', (event) => {
 myTickets.addEventListener('click', () => { 
     seeTickets();
 })
-
+//ver listado de pasajeros
 showPassenger.addEventListener('click',()=>{
     seePassengers();
 })
